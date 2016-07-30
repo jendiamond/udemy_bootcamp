@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    User Name: <input type="text" id="username" /><br/>
+    Password: <input type="password" id="pass" />
+    <div id="output"></div>
+
+    <script type="text/javascript">
+      var userName = document.getElementById("username").value;
+      var password = document.getElementById("pass").value;
+      document.getElementById("output").innerHTML = "Welcome";
+
+      var myName = 'Jen';
+      var myAge = "47";
+      alert(myName);
+      var isInterested = true;
+
+      var name = prompt('whatz ur name');
+      var hi = ("Hi " + name);
+      alert(hi);
+
+      var myArr = [1,4,9];
+
+      myArr[3] = 16;
+      myArr[1] = 25;
+      document.write(myArr);
+
+      function wishUser() {
+        document.write("Welcome to Our Website!!!");
+      }
+      wishUser();
+
+
+      function personalWish(named_user) {
+        document.write("Hi " + named_user);
+      }
+      personalWish("jenJen");
+
+      function findSqr(num) {
+        return (num * num);
+      }
+      console.log(findSqr(3));
+
+      function countCharacters(char, str) {
+        var str_array = str.split("");
+        var result = [];
+        for(var i = 0; i < str_array.length; i++) {
+          if (str_array[i] === char){
+            result.push(char);
+          }
+        }
+        return ("result " + result);
+      }
+      console.log(countCharacters("a", "banana"))
+    </script>
+
+  </body>
+</html>
+ 
