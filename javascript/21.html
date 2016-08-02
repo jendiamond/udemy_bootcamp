@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Udemy Practical JS Lecture 21</title>
+      <script type="text/javascript">
+        function convertToKm(miles)
+          {
+            var miles = document.getElementById("miles").value;
+            document.getElementById("result").innerHTML = (miles * 1.609344) + " kilometers";
+          }
+          function convertToMiles(km)
+          {
+            var km = document.getElementById("kilometers").value;
+            document.getElementById("result_miles").innerHTML = (km / 1.609344) + "miles";
+          }
+      </script>
+  </head>
+  <body>
+    <h2>Udemy Practical JS Exercise 7 - Mathematical Operation</h2>
+    <h3>Section 4 Lecture 21</h3>
+    <hr/>
+    <h3>Miles to Kilometers</h3>
+    <input type="text" id="miles" size="10"/> mile(s) =
+    <span id="result"></span><br/><br/>
+    <button id="btnClick" onclick="convertToKm();">Convert</button>
+    <br/><br/><hr/>
+    <h3>Kilometers to Miles</h3>
+    <input type="text" id="kilometers" size="10"/> kilometer(s) =
+    <span id="result_miles"></span><br/><br/>
+    <button id="btnClick2" onclick="convertToMiles();">Convert</button>
+    <hr/>
+  </body>
+</html>
+
+ <!-- km = mi x 1.609344
+      mi = km ÷ 1.609344 -->

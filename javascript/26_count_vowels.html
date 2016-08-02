@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+    Udemy Practical JS Lecture 26
+  </title>
+    <script type="text/javascript">
+
+    function countVowels(str)
+    {
+      var count = 0;
+      for(var i=0 ; i<str.length-1; i++)
+      {
+        switch (str[i])
+        {
+          case "a":
+          case "e":
+          case "i":
+          case "o":
+          case "i":
+            count++;
+            break;
+        }
+      }
+      return ("Number of vowels in the word " + str + ": " + count);
+    }
+    document.write(countVowels("Jennifer"));
+    </script>
+  </head>
+  <body>
+    <h2>Udemy Practical JS Count the Number of Vowels</h2>
+    <h3>Section 5 Lecture 26</h3>
+    <p>Check console log</p>
+  </body>
+</html>

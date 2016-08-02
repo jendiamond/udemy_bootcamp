@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Udemy Practical JS Lecture 29</title>
+    <script type="text/javascript">
+      function formAQueue(arr, val)
+      {
+        var first = arr[0];
+        for(var i=0; i<arr.length-1; i++)
+        {
+          arr[i] = arr[i + 1];
+        }
+        
+        arr.length = arr.length - 1;
+        arr[arr.length] = val;
+        return first;
+      }
+      var myArr = ["Artie","Jane","Gabriel","Samantha","Fred"];
+      document.write("<br /><br /> Queue Before: " + myArr);
+
+      var out = formAQueue(myArr, "Marty");
+      document.write("<br /><br /> Queue After: " + myArr);
+      document.write("<br/><br /> Went out of the queue: " + out);
+alert(out);
+      var out_next = formAQueue(myArr, "Rose");
+      alert(out_next);
+      document.write("<br /><br /> Queue Next: " + myArr);
+      document.write("<br/><br /> Went out of the queue: " + out_next);
+    </script>
+  </head>
+  <body>
+    <hr/>
+    <h2>Udemy Practical JS Implement a Queue</h2>
+    <h3>Section 5 Lecture 29</h3>
+    <p>Check console log</p>
+  </body>
+</html>
