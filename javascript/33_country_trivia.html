@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Udemy Practical JS Lecture 33</title>
+    <style type="text/css">
+      #main
+      {
+        margin: 0px auto;
+        border:2px solid black;
+        width:400px;
+        background-color: pink;
+       }
+    </style>
+
+    <script type="text/javascript">
+      function displayDetails()
+      {
+        var country = [];
+        var capital = [];
+        var currency = [];
+        var language = [];
+
+        country[0] = "Angola";
+        capital[0] = "Luanda";
+        currency[0] = "Kwanza";
+        language[0] = "Portuguese";
+
+        country[1] = "Australia";
+        capital[1] = "Canberra";
+        currency[1] = "Dollar";
+        language[1] = "English";
+
+        country[2] = "Denmark";
+        capital[2] = "Copenhagen";
+        currency[2] = "Krone";
+        language[2] = "Danish";
+
+        country[3] = "Germany";
+        capital[3] = "Berlin";
+        currency[3] = "Euro";
+        language[3] = "German";
+
+        country[4] = "Japan";
+        capital[4] = "Toyko";
+        currency[4] = "Yen";
+        language[4] = "Japanese";
+
+        country[5] = "Peru";
+        capital[5] = "Lima";
+        currency[5] = "Nuevo Sol";
+        language[5] = "Spanish";
+
+        country[6] = "Spain";
+        capital[6] = "Madrid";
+        currency[6] = "Euro";
+        language[6] = "Spanish";
+
+    var choice = document.getElementById("countries").value;
+
+    for(var i = 0; i < country.length; i++)
+    {
+      if (country[i] == choice)
+      {
+        document.getElementById("capital").value = capital[i];
+        document.getElementById("currency").value = currency[i];
+        document.getElementById("language").value = language[i];
+        break;
+      }
+      else
+      {
+        document.getElementById("capital").value = "";
+        document.getElementById("currency").value = "";
+        document.getElementById("language").value = "";
+      }
+    }
+  }
+    </script>
+  </head>
+  <body>
+    <h2>Udemy Practical JS - 33 Country Trivia</h2>
+    <h3>Section 5 Lecture 33</h3>
+    <p>Check console log</p>
+    <hr/>
+
+    <div id="main">
+      <h2 align="center">Country Trivia</h2>
+      <h3 align="center">Select a Country Below</h3>
+      <table align="center">
+        <tr>
+          <td>Country:</td>
+          <td>
+            <select id="countries" onchange="displayDetails();">
+              <option value="empty">Select a Country</option>
+              <option value="Angola">Angola</option>
+              <option value="Australia">Australia</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Germany">Germany</option>
+              <option value="Japan">Japan</option>
+              <option value="Peru">Peru</option>
+              <option value="Spain">Spain</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Capital:</td>
+          <td><input id="capital" disabled /></td>
+        </tr>
+        <tr>
+          <td>Currency:</td>
+          <td><input id="currency" disabled /></td>
+        </tr>
+        <tr>
+          <td>Primary Language:</td>
+          <td><input id="language" disabled /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+<!-- http://www.worldclasslearning.com/general-knowledge/list-countries-capital-currencies-languages.html -->

@@ -3,12 +3,25 @@
   <head>
   <title>Udemy Practical JS Lecture 31</title>
     <script type="text/javascript">
- 
+      function displayTable(num){
+        if (num % 1 != 0)
+          {
+          alert("Please pass an integer")
+        }
+        else
+        {
+          for (var i = 1; i <= 20; i++)
+          {
+            document.write(i + " &times " + num + " = " + (i*num) + "<br/>");
+          }
+        }
+      }
+      displayTable(4);
     </script>
   </head>
   <body>
-    <h2>Udemy Practical JS Display Multiplication Table</h2>
-    <h3>Section 5 Lecture 25</h3>
+    <h2>Udemy Practical JS - Display Multiplication Table</h2>
+    <h3>Section 5 Lecture 31</h3>
     <p>Check console log</p>
   </body>
 </html>

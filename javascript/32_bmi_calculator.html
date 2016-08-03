@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Udemy Practical JS Lecture 32</title>
+    <script type="text/javascript">
+      function calculateBMI()
+      {
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        if ((height%1)>=0 && (weight%1)>=0)
+        {
+          var heightInMs = height/100;
+        
+          var bmi = weight/(heightInMs*heightInMs);
+          var result = "Your Body Mass Index (BMI) is " + bmi.toFixed(2);
+          
+          if (bmi <= 18.5)
+          {
+            result += "<br/> You are underweight."
+          }
+          else if (bmi > 18.5 && bmi <= 24.9)
+          {
+            result += "<br/> You are the perfect weight."
+          }
+          else if (bmi > 24.5 && bmi <= 29.9)
+          {
+            result += "<br/> You are overweight."
+          }
+          else
+          {
+            result += "<br/> You are at the obese level.";
+          }
+          document.getElementById("output").innerHTML = result;
+        }
+        else
+        {
+          alert("Enter valid inputs");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Udemy Practical JS - BMI calculator</h2>
+    <h3>Section 5 Lecture 32</h3>
+    <p>Check console log</p>
+    <hr/>
+    <table>
+      <tr><td>Height:</td><td><input type="text" id="height" /></td><td> (in centimeters)</td></tr>
+       <tr><td>Weight:</td><td><input type="text" id="weight" /></td><td> (in kilometers)</td></tr>
+      </table>
+      <button id="btnClick" onclick="calculateBMI();">Calculate BMI</button><br/>
+      <div id="output" style="font-size: 30px; color: green"</div>
+    
+  </body>
+</html>
+<!-- http://www.whathealth.com/bmi/formula.html -->
