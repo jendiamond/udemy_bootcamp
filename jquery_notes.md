@@ -118,4 +118,16 @@ $(document).ready(function(){
 
 ### 16.Hands-On Practice: this and Tagname Selectors
 
+---
 
+Section: 4 Let the Actions Happen (jQuery Events)
+31.Overview 3:33
+32.Mouse Events 9:55
+33.Keyboard Events 3:27
+34.Form Events - Part 1 (focus, blur, focusin and focusout) 6:54
+35.Form Events - Part 2 (change, select and submit) 9:20
+36.Browser Events 5:30
+37.How to Attach Event Handlers? 11:40
+38.Method Chaining 4:10
+Quiz 4
+39.Exercises: Events
